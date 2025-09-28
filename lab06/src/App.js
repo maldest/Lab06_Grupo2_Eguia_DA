@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Table from "./Table";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    characters: [
+      { name: "Pepe", job: "Doctor" },
+      { name: "Mario", job: "Abogado" },
+      { name: "Denisee", job: "Actriz" },
+      { name: "Pedro", job: "Ingeniero de Sistemas" },
+    ],
+  };
+
+  removeCharacter = (index) => {
+    this.setState((prevState) => ({
+      characters: prevState.characters.filter((_, i) => i !== index),
+    }));
+  };
+
+  render() {
+    const { characters } = this.state;
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Lista de personajes</h1>
+          {/* 1) Pasamos characters y removeCharacter como props a Table */}
+          <Table characterData={characters} removeCharacter={this.removeCharacter} />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
