@@ -13,20 +13,19 @@ function App() {
     { name: "Pedro", job: "Ingeniero de Sistemas" },
   ]);
 
-  // eliminar personaje
   const removeCharacter = (index) => {
     setCharacters((prev) => prev.filter((_, i) => i !== index));
   };
 
-  // agregar personaje
   const handleSubmit = (character) => {
     setCharacters((prev) => [...prev, character]);
   };
 
   return (
     <div className="app-root">
+      {/* Barra de navegación */}
       <nav className="top-nav">
-        <h2 className="brand">Prácticas React - Lab (Hooks)</h2>
+        <h2 className="brand">Prácticas React - Laboratorio 06</h2>
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -34,6 +33,7 @@ function App() {
         </div>
       </nav>
 
+      {/* Contenido principal con enrutamiento */}
       <main className="main-container">
         <Routes>
           <Route
@@ -48,6 +48,8 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/api" element={<Api />} />
+
+          {/* Ruta por defecto */}
           <Route
             path="*"
             element={
@@ -62,8 +64,9 @@ function App() {
         </Routes>
       </main>
 
+      {/* Footer */}
       <footer className="app-footer">
-        <small>Trabajo práctico — Versión Hooks</small>
+        <small>Trabajo práctico — Guía de Prácticas N°06</small>
       </footer>
     </div>
   );

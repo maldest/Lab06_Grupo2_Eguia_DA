@@ -1,0 +1,28 @@
+.page {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.intro {
+  color: var(--muted);
+}
+
+.content-row {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

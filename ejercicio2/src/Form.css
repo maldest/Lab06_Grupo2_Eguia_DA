@@ -1,0 +1,51 @@
+.form-container {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  max-width: 420px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.form-group input[type="text"] {
+  padding: 10px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  outline: none;
+  background: #111827;
+  color: var(--text);
+}
+
+.form-group input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+.form-actions {
+  margin-top: 12px;
+}
+
+.btn-submit {
+  background: var(--accent);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background: #4f46e5;
+}

@@ -6,12 +6,17 @@ import "./pages.css";
 const Home = ({ characters, removeCharacter, handleSubmit }) => {
   return (
     <div className="page">
-      <h1>Gestión de Personajes (Hooks)</h1>
-      <p className="intro">Ejemplo con useState + props + formularios.</p>
+      <h1>Gestión de Personajes</h1>
+      <p className="intro">
+        Ejemplo con props, state y formularios.
+      </p>
 
       <section className="content-row">
         <div className="table-wrapper">
-          <Table characterData={characters} removeCharacter={removeCharacter} />
+          <Table
+            characterData={characters}
+            removeCharacter={removeCharacter}
+          />
         </div>
 
         <div className="form-wrapper">

@@ -1,0 +1,48 @@
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background: #374151;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.styled-table tr {
+  border-bottom: 1px solid #2d3748;
+}
+
+.styled-table tr:nth-child(even) td {
+  background: #1f2937;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 18px;
+  color: var(--muted);
+}
+
+.btn-delete {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}

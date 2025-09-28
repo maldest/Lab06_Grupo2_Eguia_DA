@@ -11,7 +11,7 @@ function Form({ handleSubmit }) {
 
   const submitForm = () => {
     if (!form.name.trim() || !form.job.trim()) {
-      alert("Completa los campos");
+      alert("Completa todos los campos");
       return;
     }
     handleSubmit(form);
@@ -31,6 +31,7 @@ function Form({ handleSubmit }) {
           onChange={onChange}
         />
       </div>
+
       <div className="form-group">
         <label htmlFor="job">Trabajo</label>
         <input
@@ -42,6 +43,7 @@ function Form({ handleSubmit }) {
           onChange={onChange}
         />
       </div>
+
       <div className="form-actions">
         <input
           type="button"
